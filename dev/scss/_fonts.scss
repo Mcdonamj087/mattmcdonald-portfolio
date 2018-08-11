@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Courier New';
+    src: url('../fonts/CourierNewPS-BoldMT.eot');
+    src: url('../fonts/CourierNewPS-BoldMT.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CourierNewPS-BoldMT.woff2') format('woff2'),
+        url('../fonts/CourierNewPS-BoldMT.woff') format('woff'),
+        url('../fonts/CourierNewPS-BoldMT.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro Rust Base';
+    src: url('../fonts/IntroRust-Base.eot');
+    src: url('../fonts/IntroRust-Base.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/IntroRust-Base.woff2') format('woff2'),
+        url('../fonts/IntroRust-Base.woff') format('woff'),
+        url('../fonts/IntroRust-Base.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

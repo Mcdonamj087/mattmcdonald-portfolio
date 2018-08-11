@@ -1,0 +1,69 @@
+/*********************************************
+ Bonus
+*********************************************/
+
+#bonus {
+	height: 430px;
+	@media (max-width: $tablet) {
+		height: inherit;
+		&:before, &:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+	.halfCol {
+		height: 100%;
+		position: relative;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		@media (max-width: $tablet) {
+			height: 360px;
+		}
+		* {
+			z-index: 1;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.9;
+			background: $black;
+		}
+		&.music {
+			background-image: url('/images/bonus-music.png');
+			&:before {
+				background: $green;
+			}
+			h2 {
+				color: $black;
+			}
+		}
+		&.coding {
+			background-image: url('/images/bonus-coding.png');
+			color: #fff;
+			&:before {
+				background: $blue;
+			}
+			h2 {
+				color: #fff;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 40px;
+		max-width: 400px;
+	}
+}

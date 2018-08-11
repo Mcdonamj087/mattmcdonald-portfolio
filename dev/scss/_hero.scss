@@ -1,0 +1,116 @@
+/*********************************************
+ Hero
+*********************************************/
+
+#hero {
+	height: 100vh;
+	width: 100%;
+	background: $blue;
+	position: relative;
+	padding-top: 80px;
+	margin-top: -80px;
+	@media( max-width: $tablet ) {
+		padding-top: 50px;
+		margin-top: -50px;
+	}
+	.halfCol {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		@media( max-width: $tablet ) {
+			height: 50%;
+		}
+		&.faces {
+			position: relative;
+			overflow: hidden;
+		}
+		.face {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+			transition: all 1s cubic-bezier(.6,.04,.42,.97);
+			img {
+				height: 72%;
+			}
+			&.designface {
+				background: $green;
+			}
+			&.codeface {
+				background: $red;
+				transform: translateY(100%);
+			}
+			&.musicface {
+				background: $yellow;
+				transform: translateY(100%);
+			}
+		}
+		.subjectWrap {
+			height: 170px;
+			width: 100%;
+			position: relative;
+			.subject {
+				position: absolute;
+				width: 100%;
+				transition: all 0.5s cubic-bezier(.6,.04,.42,.97) 0.3s;
+				opacity: 0;
+				transform: translateY(50px);
+			}
+		}
+	}
+	h4 {
+		font-size: 18px;
+		color: $green;
+		letter-spacing: .2rem;
+		transition: all 0.5s ease-out;
+	}
+	hr {
+		border: 2px solid $green;
+		width: 38px;
+		margin: 25px;
+		transition: all 0.5s ease-out;
+	}
+	h1 {
+		font-size: 48px;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	p {
+		color: #fff;
+		max-width: 365px;
+		font-size: 20px;
+		line-height: 26px;
+		margin: 0 auto;
+	}
+	.scrollDown {
+		background: #fff;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		box-shadow: 0 3px 10px rgba(57, 59, 82, 0.3);
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		z-index: 99;
+		animation: scrollDown 2s infinite;
+		img {
+			width: 12px;
+	    margin: 12px auto;
+	    display: block;
+		}
+	}
+}
+@keyframes scrollDown {
+	0% { transform: translate(-50%, 6px) }
+	50% { transform: translate(-50%, 0px) }
+	100% { transform: translate(-50%, 6px) }
+}

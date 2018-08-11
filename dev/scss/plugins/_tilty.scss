@@ -1,0 +1,19 @@
+/*******************************************
+  Tilty CSS
+********************************************/
+
+.tilty {
+  box-shadow: 0 0 55px -5px rgba(18, 11, 39, 0.31);
+  position: relative;
+  transition: all 0.2s ease-out;
+  .glare {
+    background: radial-gradient(ellipse closest-side,hsla(0,0%,100%,.45),hsla(0,0%,100%,0));
+    height: 76%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    opacity: 0.5;
+    transition: all 0.2s ease-out;
+  }
+}

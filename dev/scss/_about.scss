@@ -1,0 +1,88 @@
+/*********************************************
+ About
+*********************************************/
+
+#about {
+	height: 650px;
+	display: flex;
+	@media( max-width: $tablet ) {
+		flex-direction: column;
+		height: inherit;
+	}
+	.halfCol {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		&.images {
+			@media( max-width: $tablet ) {
+				padding-top: 80px;
+			}
+		}
+		&.content {
+			@media( max-width: $tablet ) {
+				padding: 140px 0 80px;
+			}
+		}
+		
+	}
+	.map {
+		position: absolute;
+		width: 70%;
+		height: 0;
+		left: 40%;
+		top: 41%;
+		@media( max-width: $tablet ) {
+			max-width: 350px;
+			left: unset;
+			top: unset;
+			bottom: 0;
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	.aboutPic {
+		width: 40%;
+		height: 0px;
+		padding-bottom: 40%;
+		box-sizing: content-box;
+		border: 11px solid #fff;
+		box-shadow: 0 10px 26px -4px rgba(57, 59, 82, 0.3);
+		position: relative;
+		right: 9%;
+		top: 5%;
+		overflow: hidden;
+		@media( max-width: $web1024 ) {
+			border-width: 9px;
+		}
+		@media( max-width: $tablet ) {
+			width: 180px;
+			padding-bottom: 180px;
+			border-radius: 50%;
+			border: none;
+			right: unset;
+			top: unset;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.contentWrap {
+		width: 58%;
+		@media( max-width: $tablet ) {
+			text-align: center;
+			width: 71%;
+		}
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+
+

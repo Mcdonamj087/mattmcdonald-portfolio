@@ -1,0 +1,73 @@
+/*********************************************
+ Header
+*********************************************/
+
+header {
+	height: 80px;
+	background: #fff;
+	box-shadow: 0 3px 26px rgba(51, 46, 160, 0.25);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: relative;
+  z-index: 100;
+  @media (max-width: $tablet) {
+    height: 50px;
+  }
+	.mmLogo {
+		height: 43px;
+		width: 43px;
+    position: absolute;
+    left: 20px;
+    @media (max-width: $tablet) {
+      height: 30px;
+      width: 30px
+    }
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 320px;
+		a {
+			font-family: 'Intro Rust Base';
+			font-size: 0.75rem;
+			letter-spacing: 0.03rem;
+			text-decoration: none;
+			color: $black;
+      position: relative;
+      display: block;
+      padding: 10px;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 12px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: $blue;
+        transform: translateY(3px);
+      }
+      &:hover:before {
+        transform: translate(-50%, -13px) rotate(-45deg);
+        opacity: 1;
+      }
+      &:before {
+        content: '';
+        height: 6px;
+        width: 6px;
+        background: $blue;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0px) rotate(135deg);
+        transition: all 0.3s ease-out;
+        z-index: -1;
+        opacity: 0;
+      }
+		}
+	}
+  .socialIcons a:hover svg {
+    fill: $blue;
+  }
+}
+

@@ -1,0 +1,83 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Courier New';
+	-webkit-font-smoothing: antialiased;
+	color: $black;
+	&.projectActive {
+		overflow-y: hidden;
+	}
+	#singleProjectWrap {
+		opacity: 0;
+		transition: all 0.5s ease-out;
+	}
+}
+
+a {
+	color: $blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Intro Rust Base';
+	color: $blue;
+}
+
+h1 { font-size: 2rem }
+h2 { font-size: 1.5rem }
+h3 { font-size: 1rem }
+h4 { font-size: .875rem }
+
+p { font-size: 0.875rem; line-height: 1.5rem }
+
+.socialIcons {
+  margin-right: -10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: absolute;
+  right: 30px;
+  a {
+    padding: 10px;
+    font-size: 0;
+    svg {
+      transition: all 0.3s ease-out;
+    }
+    &:hover svg {
+      fill: $blue;
+    }
+  }
+}
+
+.halfCol {
+	width: 50%;
+	float: left;
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+}
+
+.btn {
+	font-family: 'Intro Rust Base';
+	font-size: 0.75rem;
+	line-height: 0.875rem;
+	letter-spacing: 0.05rem;
+	padding: 15px 20px;
+	border: 2px solid $black;
+	background: transparent;
+	transition: all 0.3s ease-out;
+	text-decoration: none;
+	color: $black;
+	&:hover {
+		background: $black;
+		color: #fff;
+	}
+	&.btnWhite {
+		border-color: #fff;
+		color: #fff;
+		&:hover {
+			background: #fff;
+			color: $blue;
+		}
+	}
+}

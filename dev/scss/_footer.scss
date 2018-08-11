@@ -1,0 +1,27 @@
+/*********************************************
+ Footer
+*********************************************/
+
+footer {
+	background: $black;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	h4 {
+		color: #fff;
+	}
+	.logo {
+		height: 22px;
+		margin-bottom: 18px;
+		svg {
+			height: 100%;
+		}
+	}
+	.socialIcons a svg {
+    fill: $green;
+  }
+}

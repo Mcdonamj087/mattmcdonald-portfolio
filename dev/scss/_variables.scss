@@ -1,0 +1,16 @@
+$blue: #514AF2;
+$green: #7EFFAB;
+$red: #FF7E7E;
+$yellow: #FFD27E;
+$lightgray: #ECEEF4;
+$black: #393B52;
+
+$web1024: 1024px;
+$tablet: 768px;
+$mobile: 375px;
+
+%clearfix {
+	content: '';
+	display: table;
+	clear: both;
+}
